@@ -19,5 +19,7 @@ public class ProducerController {
     public void produceMessage(){
         rocketMQTemplate.convertAndSend("test-topic-1", "Hello, World!");
         rocketMQTemplate.send("test-topic-1", MessageBuilder.withPayload("Hello, World! I'm from spring message").build());
+//        rocketMQTemplate.convertAndSend("TEST_TOPIC", "Hello, World!");
+//        rocketMQTemplate.send("TEST_TOPIC", MessageBuilder.withPayload("Hello, World! I'm from spring message").build());
     }
 }
