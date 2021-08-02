@@ -10,7 +10,7 @@ public class BaiduDemo {
     public static void main(String[] args) {
         System.setProperty("webdriver.chrome.driver", "D:\\java\\driver\\chromedriver.exe");// chromedriver服务地址
 
-        WebDriver driver = new ChromeDriver();;
+        WebDriver driver = new ChromeDriver();
         driver.get("https://www.baidu.com/");
 
         WebElement search_text = driver.findElement(By.id("kw"));
