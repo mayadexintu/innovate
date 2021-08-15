@@ -7,8 +7,8 @@ import org.springframework.stereotype.Service;
 
 @Slf4j
 @Service
-@RocketMQMessageListener(topic = "test-topic-1", consumerGroup = "my-consumer_test-topic-1")
-//@RocketMQMessageListener(topic = "TEST_TOPIC", consumerGroup = "my-consumer_test-topic-1")
+//@RocketMQMessageListener(topic = "test-topic-1", consumerGroup = "my-consumer_test-topic-1")
+@RocketMQMessageListener(topic = "TEST_TOPIC", consumerGroup = "my-consumer_test-topic-1")
 public class MyConsumer implements RocketMQListener<String> {
 
     @Override
