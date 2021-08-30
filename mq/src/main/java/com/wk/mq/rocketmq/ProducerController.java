@@ -33,8 +33,8 @@ public class ProducerController {
         int num = 3;
         for (int i = 0; i < num; i++) {
             int nextInt = RandomUtils.nextInt();
-            SendResult result = rocketMQTemplate.syncSend("TEST_TOPIC", "my message-" + i + ":" + nextInt, 1000);
-            System.out.println("send result is\t" + result);
+            SendResult result = rocketMQTemplate.syncSend("RAFT_TOPIC", "my message-" + i + ":" + nextInt);
+            System.out.println("send result is：\t" + result);
         }
 
         map.put("isSend", "OK");
